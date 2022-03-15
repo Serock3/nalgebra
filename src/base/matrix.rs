@@ -1102,6 +1102,7 @@ impl<T, R: Dim, C: Dim, S: RawStorage<T, R, C>> Matrix<T, R, C, S> {
     /// assert_eq!(*it.next().unwrap(), 13);
     /// assert_eq!(*it.next().unwrap(), 23);
     /// assert!(it.next().is_none());
+    /// ```
     #[inline]
     pub fn iter(&self) -> MatrixIter<'_, T, R, C, S> {
         MatrixIter::new(&self.data)
